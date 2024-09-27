@@ -1,3 +1,3 @@
 export const environment = {
-  ApiUrl: "https://localhost:7152/api/"
+  UrlApi: "https://localhost:7152/api/Funcionario"
 };
