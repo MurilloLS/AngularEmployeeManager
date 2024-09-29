@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Funcionarios } from '../../models/Funcionarios';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
