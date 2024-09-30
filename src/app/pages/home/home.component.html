@@ -37,10 +37,14 @@
             <button>Detalhes</button>
           </td>
           <td>
-            <button>Excluir</button>
+            <button (click)="deletar(funcionario.id)">Excluir</button>
           </td>
         </tr>
       }
+    }@else {
+      <tr>
+        <td colspan="7">Nenhum usuário cadastrado</td>
+      </tr>
     }
   </tbody>
 </table>
