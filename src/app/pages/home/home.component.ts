@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Funcionarios } from '../../models/Funcionarios';
 import { RouterModule } from '@angular/router';
+import { response } from 'express';
 
 
 @Component({
@@ -38,6 +39,12 @@ export class HomeComponent implements OnInit {
 
     this.funcionarios = this.funcionariosGeral.filter(funcionario => {
       return funcionario.nome.toLowerCase().includes(value);
+    })
+  }
+
+  deletar(id: number | undefined) {
+    this.serviceFuncionario.DeletarFuncionario(id).subscribe(response => {
+      window.location.reload()
     })
   }
 }
