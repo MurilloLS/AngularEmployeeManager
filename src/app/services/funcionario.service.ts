@@ -22,4 +22,8 @@ export class FuncionarioService {
     return this.http.post<Response<Funcionarios[]>>(this.ApiUrl, funcionario);
   }
 
+  DeletarFuncionario(id: number | undefined): Observable<Response<Funcionarios[]>>{
+    return this.http.delete<Response<Funcionarios[]>>(`${this.ApiUrl}?funcionarioId=${id}`)
+  }
+
 }
