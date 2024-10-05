@@ -10,20 +10,32 @@ import { Response } from '../models/Response';
 })
 export class FuncionarioService {
 
-  ApiUrl = environment.UrlApi;
+  ApiUrl = `${environment.UrlApi}/Funcionario`;
 
-  constructor(private http : HttpClient) { }
+  constructor(private readonly http : HttpClient) { }
   
   GetFuncionarios() : Observable<Response<Funcionarios[]>> {
     return this.http.get<Response<Funcionarios[]>>(this.ApiUrl);
   }
 
   CriarFuncionario(funcionario: Funcionarios) : Observable<Response<Funcionarios[]>> {
-    return this.http.post<Response<Funcionarios[]>>(this.ApiUrl, funcionario);
+    return this.http.post<Response<Funcionarios[]>>(`${this.ApiUrl}`, funcionario);
   }
 
   DeletarFuncionario(id: number | undefined): Observable<Response<Funcionarios[]>>{
     return this.http.delete<Response<Funcionarios[]>>(`${this.ApiUrl}?funcionarioId=${id}`)
+  }
+
+  GetFuncionarioId(id: number): Observable<Response<Funcionarios>>{
+    return this.http.get<Response<Funcionarios>>(`${this.ApiUrl}/${id}`);
+  }
+
+  EditarFuncionario(funcionario: Funcionarios): Observable<Response<Funcionarios[]>>{
+    return this.http.put<Response<Funcionarios[]>>(`${this.ApiUrl}`, funcionario);
+  }
+
+  InativaFuncionario(id: number): Observable<Response<Funcionarios[]>>{
+    return this.http.put<Response<Funcionarios[]>>(`${this.ApiUrl}/InativaFuncionario/${id}`, id);
   }
 
 }
