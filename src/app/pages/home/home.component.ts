@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Funcionarios } from '../../models/Funcionarios';
 import { RouterModule } from '@angular/router';
-import { response } from 'express';
 
 
 @Component({

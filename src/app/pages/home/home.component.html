@@ -1,14 +1,14 @@
-<div class="funcionario-box">
-  <button [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Cadastrar novo funcionário</button>
-  <div class="input-box">
-    <label>Procurar</label>
-    <input type="text" placeholder="Qual registro está buscando?"(input)="search($event)">
+<div class="container mt-5">
+  <button class="btn btn-success w-100" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Cadastrar novo funcionário</button>
+  <div>
+    <label class="form-label">Procurar</label>
+    <input class="form-control" type="text" placeholder="Qual registro está buscando?"(input)="search($event)">
   </div>
 </div>
 
 
-<table class="table">
-  <thead>
+<table class="table table-hover table-bordered mt-5">
+  <thead class="table-dark">
     <tr>
       <th></th>
       <th>Nome</th>
@@ -33,16 +33,16 @@
           <td>{{funcionario.sobrenome}}</td>
           <td>{{funcionario.departamento}}</td>
           <td>
-            <button>Editar</button>
-            <button>Detalhes</button>
+            <button class="btn btn-warning mx-2" [routerLink]="['/editar', funcionario.id]">Editar</button>
+            <button class="btn btn-info mx-2" [routerLink]="['/detalhes', funcionario.id]">Detalhes</button>
           </td>
           <td>
-            <button (click)="deletar(funcionario.id)">Excluir</button>
+            <button class="btn btn-danger mx-2" (click)="deletar(funcionario.id)">Excluir</button>
           </td>
         </tr>
       }
     }@else {
-      <tr>
+      <tr class="text-center">
         <td colspan="7">Nenhum usuário cadastrado</td>
       </tr>
     }
