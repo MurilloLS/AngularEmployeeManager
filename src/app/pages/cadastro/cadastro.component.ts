@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FuncionarioFormComponent } from "../../componentes/funcionario-form/funcionario-form.component";
 import { Funcionarios } from '../../models/Funcionarios';
 import { FuncionarioService } from '../../services/funcionario.service';
-import { response } from 'express';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,10 @@ import { Router } from '@angular/router';
 })
 export class CadastroComponent {
 
-  constructor(private funcionarioService: FuncionarioService, private router: Router) { }
+  btnAcao = "Cadastrar";
+  descTitulo = "Cadastrar Funcionário";
+
+  constructor(private readonly funcionarioService: FuncionarioService, private readonly router: Router) { }
   
   criarFuncionario(funcionario : Funcionarios) {
     this.funcionarioService.CriarFuncionario(funcionario).subscribe(response => {
