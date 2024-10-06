@@ -1,8 +1,8 @@
 <div class="container mt-5">
   <button class="btn btn-success w-100" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Cadastrar novo funcionário</button>
   <div>
-    <label class="form-label">Procurar</label>
-    <input class="form-control" type="text" placeholder="Qual registro está buscando?"(input)="search($event)">
+    <label for="inputProcurar" class="form-label">Procurar</label>
+    <input class="form-control" id="inputProcurar" type="text" placeholder="Qual registro está buscando?"(input)="search($event)">
   </div>
 </div>
 
