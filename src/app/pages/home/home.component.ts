@@ -41,10 +41,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  deletar(id: number | undefined) {
+  deletar(id: number) {
     this.serviceFuncionario.DeletarFuncionario(id).subscribe(response => {
       window.location.reload()
     })
   }
+  
 }
 
