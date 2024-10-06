@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Funcionarios } from '../../models/Funcionarios';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detalhes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './detalhes.component.html',
   styleUrl: './detalhes.component.css'
 })

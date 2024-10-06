@@ -2,43 +2,43 @@
   <h1>Detalhes Funcionário</h1>
   <form>
       <div class="container mt-5">
-        <label>Nome:</label>
-        <input type="text" value="{{funcionario.nome}}" disabled>
+        <label for="inputName">Nome:</label>
+        <input type="text" id="inputName" value="{{funcionario.nome}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Sobrenome:</label>
-        <input type="text" value="{{funcionario.sobrenome}}" disabled>
+        <label for="inputSobrenome">Sobrenome:</label>
+        <input type="text" id="inputSobrenome" value="{{funcionario.sobrenome}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Departamento:</label>
-        <input type="text" value="{{funcionario.departamento}}" disabled>
+        <label for="inputDepartamento">Departamento:</label>
+        <input type="text" id="inputDepartamento" value="{{funcionario.departamento}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Turno:</label>
-        <input type="text" value="{{funcionario.turno}}" disabled>
+        <label for="inputTurno">Turno:</label>
+        <input type="text" id="inputTurno" value="{{funcionario.turno}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Situação:</label>
-        <input type="text" value="{{funcionario.ativo == true ? 'Ativo' : 'Inativo'}}" disabled>
+        <label for="inputAtivo">Situação:</label>
+        <input type="text" id="inputAtivo" value="{{funcionario.ativo == true ? 'Ativo' : 'Inativo'}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Data de Criação:</label>
-        <input type="text" value="{{funcionario.dataDeCriacao}}" disabled>
+        <label for="inputDataDeCriacao">Data de Criação:</label>
+        <input type="text" id="inputDataDeCriacao" value="{{funcionario.dataDeCriacao}}" disabled>
       </div>
 
       <div class="container mt-5">
-        <label>Data de Alteração:</label>
-        <input type="text" value="{{funcionario.dataDeAlteracao}}" disabled>
+        <label for="inputDataDeAlteracao">Data de Alteração:</label>
+        <input type="text" id="inputDataDeAlteracao" value="{{funcionario.dataDeAlteracao}}" disabled>
       </div>
 
       <div class="d-flex mt-3">
         <button class="btn btn-danger w-100" (click)="inativaFuncionario()">Inativar Funcionário</button>
-        <button class="btn btn-info w-100" routerLink='/'>Voltar</button>
+        <button class="btn btn-info w-100" [routerLink]="['/']">Voltar</button>
       </div>
   </form>
 </div>
