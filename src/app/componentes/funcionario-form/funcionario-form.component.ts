@@ -3,16 +3,10 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { RouterModule } from '@angular/router';
 import { Funcionarios } from '../../models/Funcionarios';
 
-/*Angular Material*/
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from "@angular/material/form-field";
-
 @Component({
   selector: 'app-funcionario-form',
   standalone: true,
-  imports: [RouterModule, FormsModule, ReactiveFormsModule,MatButtonModule, MatCardModule, MatInputModule, MatFormFieldModule],
+  imports: [RouterModule, FormsModule, ReactiveFormsModule],
   templateUrl: './funcionario-form.component.html',
   styleUrl: './funcionario-form.component.css',
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
