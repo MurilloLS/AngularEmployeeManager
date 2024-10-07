@@ -5,18 +5,18 @@
     <input type="hidden" formControlName="id">
 
     <div class="mt-3">
-      <label class="form-label">Nome:</label>
-      <input  class="form-control text-dark" type="text" formControlName="nome" placeholder="Insira o nome!" required>
+      <label for="inputName" class="form-label">Nome:</label>
+      <input  class="form-control text-dark" type="text" id="inputName" formControlName="nome" placeholder="Insira o nome!" required>
     </div>
 
     <div class="mt-3">
-      <label class="form-label">Sobrenome:</label>
-      <input  class="form-control text-dark" type="text" formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
+      <label for="inputSobrenome" class="form-label">Sobrenome:</label>
+      <input class="form-control text-dark" type="text" id="inputSobrenome" formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
     </div>
 
     <div class="mt-3">
-      <label class="form-label">Departamento:</label>
-      <select class="form-select" id="departamento" formControlName="departamento" required>
+      <label for="selectDepartamento" class="form-label">Departamento:</label>
+      <select class="form-select" id="selectDepartamento" formControlName="departamento" required>
         <option value="RH">RH</option>
         <option value="Financeiro">Financeiro</option>
         <option value="Compras">Compras</option>
@@ -26,8 +26,8 @@
     </div>
 
     <div class="mt-3">
-      <label class="form-label" for="">Turno:</label>
-      <select class="form-select" id="turno" formControlName="turno" required>
+      <label class="form-label" for="selectTurno">Turno:</label>
+      <select class="form-select" id="selectTurno" formControlName="turno" required>
         <option value="Manha">Manhã</option>
         <option value="Tarde">Tarde</option>
         <option value="Noite">Noite</option>
