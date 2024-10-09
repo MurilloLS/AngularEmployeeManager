@@ -1,26 +1,85 @@
-# Projectangular
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+# 🚀 AngularEmployeeManager 🚀
 
-## Development server
+Aplicação Angular para gestão e consulta de funcionários, integrando-se à **API WebAPI_Funcionarios** para oferecer uma experiência de usuário fluída e eficiente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📑 Índice
+- [Funcionalidades](#-funcionalidades)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura da Aplicação](#-estrutura-da-aplicação)
+  - [Componentes Principais](#-componentes-principais)
+  - [Serviços](#-serviços)
+- [Configuração](#-configuração)
+  - [Pré-requisitos](#-pré-requisitos)
+  - [Como Executar](#-como-executar)
+- [Contribuições](#-contribuições)
 
-## Code scaffolding
+## 📋 Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Listar funcionários**: Exibe uma tabela com todos os funcionários cadastrados, com campo de busca para facilitar a navegação.
+- **Criar novo funcionário**: Formulário dinâmico para adicionar novos funcionários.
+- **Editar funcionário**: Permite editar informações de funcionários existentes.
+- **Excluir funcionário**: Opção para remover funcionários da base de dados.
+- **Desativar funcionário**: Método que inativa um funcionário, sem removê-lo permanentemente.
+- **Exibir detalhes do funcionário**: Página dedicada para exibir informações detalhadas de um funcionário selecionado.
 
-## Build
+## 🛠️ Tecnologias Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/) para estilização
+- [API WebAPI_Funcionarios](https://github.com/MurilloLS/WebAPI_Funcionarios) para integração
 
-## Running unit tests
+## 📂 Estrutura da Aplicação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 📦 Componentes Principais
 
-## Running end-to-end tests
+| Componente            | Descrição                                                             |
+|-----------------------|-----------------------------------------------------------------------|
+| `HomeComponent`        | Página inicial, exibe a lista de funcionários com campo de busca.     |
+| `CadastroComponent`    | Formulário para criar novos funcionários.                            |
+| `FuncionarioFormComponent` | Componente de formulário reutilizável para criação e edição.        |
+| `DetalhesComponent`    | Página que exibe detalhes de um funcionário específico.               |
+| `EditarComponent`      | Formulário para editar funcionários.                                 |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 🔧 Serviços
 
-## Further help
+| Serviço               | Descrição                                                             |
+|-----------------------|-----------------------------------------------------------------------|
+| `FuncionarioService`   | Gerencia requisições HTTP para a API, incluindo criação, edição, exclusão e busca de funcionários. |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ⚙️ Configuração
+
+### 🔧 Pré-requisitos
+- Node.js instalado
+- Angular CLI instalado
+
+### 🚀 Como Executar
+
+1. Clone o repositório:
+
+    ```bash
+    git clone <URL_DO_REPOSITORIO>
+    ```
+
+2. Navegue até o diretório do projeto:
+
+    ```bash
+    cd AngularEmployeeManager
+    ```
+
+3. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+4. Execute a aplicação:
+
+    ```bash
+    ng serve
+    ```
+
+5. Acesse a aplicação no navegador em `http://localhost:4200`.
+
+## 🤝 Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou enviar um pull request.
