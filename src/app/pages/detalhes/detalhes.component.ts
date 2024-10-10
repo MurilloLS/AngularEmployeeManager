@@ -38,4 +38,10 @@ export class DetalhesComponent implements OnInit{
       this.router.navigate(['/']);
     })
   }
+
+  ativaFuncionario(){
+    this.funcionarioService.AtivaFuncionario(this.id).subscribe(response => {
+      this.router.navigate(['/']);
+    })
+  }
 }
