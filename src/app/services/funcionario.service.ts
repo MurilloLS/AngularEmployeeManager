@@ -38,4 +38,8 @@ export class FuncionarioService {
     return this.http.put<Response<Funcionarios[]>>(`${this.ApiUrl}/InativaFuncionario/${id}`, id);
   }
 
+  AtivaFuncionario(id: number): Observable<Response<Funcionarios[]>>{
+    return this.http.put<Response<Funcionarios[]>>(`${this.ApiUrl}/AtivaFuncionario/${id}`, id);
+  }
+
 }
