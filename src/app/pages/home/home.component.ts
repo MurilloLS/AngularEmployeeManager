@@ -33,14 +33,21 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  search(event : Event) {
+  search(event: Event) {
     const target = event.target as HTMLInputElement;
-    const value = target.value.toLowerCase();
-
+    const value = target.value.trim().toLowerCase();
+  
     this.funcionarios = this.funcionariosGeral.filter(funcionario => {
-      return funcionario.nome.toLowerCase().includes(value);
-    })
+
+      const fullName = `${funcionario.nome} ${funcionario.sobrenome}`.toLowerCase().trim();
+      
+      return fullName.includes(value) || 
+             funcionario.nome.toLowerCase().includes(value) || 
+             funcionario.sobrenome.toLowerCase().includes(value) ||
+             funcionario.departamento.toLowerCase().includes(value);
+    });
   }
+  
 
   deletar(id: number) {
     this.serviceFuncionario.DeletarFuncionario(id).subscribe(response => {
