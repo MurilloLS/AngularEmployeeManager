@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Funcionarios } from '../../models/Funcionarios';
 import { RouterModule } from '@angular/router';
+import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog/confirmation-dialog.service';
 
 
 @Component({
@@ -46,6 +47,22 @@ export class HomeComponent implements OnInit {
       window.location.reload()
     })
   }
+
+
+  confirmationService = inject(ConfirmationDialogService);
+
+  async openModal(id: number) {
+    const confirmed = await this.confirmationService.confirm(
+      "Tem certeza disso?", 
+      "Não será possível recuperar o funcionário.", 
+      "Confirmar", 
+      "Cancelar"
+    );
   
+    if (confirmed) {
+      this.deletar(id);
+    }
+  }
+   
 }
 
