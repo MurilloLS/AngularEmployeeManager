@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Funcionarios } from '../../models/Funcionarios';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog/confirmation-dialog.service';
 
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   funcionarios: Funcionarios[] = [];
   funcionariosGeral: Funcionarios[] = [];
 
-  constructor(private serviceFuncionario: FuncionarioService) {}
+  constructor(private serviceFuncionario: FuncionarioService, private router: Router) {}
 
   ngOnInit(): void {
     this.serviceFuncionario.GetFuncionarios().subscribe(response => {
@@ -71,5 +71,9 @@ export class HomeComponent implements OnInit {
     }
   }
    
+  logout() {
+    localStorage.removeItem('token'); 
+    this.router.navigate(['/']); 
+  }
 }
 
