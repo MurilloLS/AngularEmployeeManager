@@ -1,0 +1,29 @@
+<section class="vh-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-5">Sign in</h3>
+            <form (submit)="onSubmit()">
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="login" class="form-control form-control-lg" [(ngModel)]="loginData.login" name="login" required />
+                <label class="form-label" for="login">Nome de usuário</label>
+              </div>
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="password" class="form-control form-control-lg" [(ngModel)]="loginData.password" name="password" required />
+                <label class="form-label" for="password">Senha</label>
+              </div>
+
+              <div *ngIf="errorMessage" class="alert alert-danger">
+                {{ errorMessage }}
+              </div>
+
+              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" type="submit">Entrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
