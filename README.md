@@ -1,6 +1,6 @@
 # 🚀 AngularEmployeeManager 🚀
 
-Aplicação Angular para gestão e consulta de funcionários, integrando-se à **API WebAPI_Funcionarios** para oferecer uma experiência de usuário fluída e eficiente.
+A Aplicação de Gestão de Funcionários foi criada para otimizar a administração de dados de funcionários, proporcionando uma experiência de usuário fluida. Desenvolvida com Angular, ela se integra à API RESTful WebAPI_Funcionarios, permitindo operações rápidas de CRUD, enquanto utiliza JSON Web Token (JWT) para garantir autenticação e segurança nos acessos.
 
 ## 📑 Índice
 - [Funcionalidades](#-funcionalidades)
@@ -21,6 +21,8 @@ Aplicação Angular para gestão e consulta de funcionários, integrando-se à *
 - **Excluir funcionário**: Opção para remover funcionários da base de dados.
 - **Desativar funcionário**: Método que inativa um funcionário, sem removê-lo permanentemente.
 - **Exibir detalhes do funcionário**: Página dedicada para exibir informações detalhadas de um funcionário selecionado.
+- **Autenticação e autorização**: Integração com sistema de autenticação para proteger rotas que requerem login.
+- **Confirmação de ações**: Diálogo modal para confirmar a exclusão de funcionários.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -28,6 +30,7 @@ Aplicação Angular para gestão e consulta de funcionários, integrando-se à *
 - [TypeScript](https://www.typescriptlang.org/)
 - [Bootstrap](https://getbootstrap.com/) para estilização
 - [API WebAPI_Funcionarios](https://github.com/MurilloLS/WebAPI_Funcionarios) para integração
+- [@auth0/angular-jwt](https://github.com/auth0/angular2-jwt) para manuseio de tokens JWT
 
 ## 📂 Estrutura da Aplicação
 
@@ -40,12 +43,14 @@ Aplicação Angular para gestão e consulta de funcionários, integrando-se à *
 | `FuncionarioFormComponent` | Componente de formulário reutilizável para criação e edição.        |
 | `DetalhesComponent`    | Página que exibe detalhes de um funcionário específico.               |
 | `EditarComponent`      | Formulário para editar funcionários.                                 |
+| `LoginComponent`       | Formulário para autenticação de usuários.                            |
 
 ### 🔧 Serviços
 
 | Serviço               | Descrição                                                             |
 |-----------------------|-----------------------------------------------------------------------|
 | `FuncionarioService`   | Gerencia requisições HTTP para a API, incluindo criação, edição, exclusão e busca de funcionários. |
+| `AuthService`         | Gerencia a autenticação de usuários e manipulação de tokens JWT.     |
 
 ## ⚙️ Configuração
 
@@ -79,7 +84,7 @@ Aplicação Angular para gestão e consulta de funcionários, integrando-se à *
     ng serve
     ```
 
-5. Acesse a aplicação no navegador em `http://localhost:4200`.
+5. Acesse a documentação da API via Swagger em `https://localhost:<PORTA>/swagger`.
 
 ## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou enviar um pull request.
