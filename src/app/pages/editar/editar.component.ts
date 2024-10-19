@@ -29,7 +29,7 @@ export class EditarComponent implements OnInit {
 
   editarFuncionario(funcionario: Funcionarios){
     this.funcionarioService.EditarFuncionario(funcionario).subscribe(response => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
     })
   }
 }
