@@ -39,7 +39,7 @@
     <div class="d-flex mt-3">
       <a *ngIf="funcionario.ativo" class="btn btn-danger w-100" (click)="inativaFuncionario()">Inativar Funcionário</a>
       <a *ngIf="!funcionario.ativo" class="btn btn-success w-100" (click)="ativaFuncionario()">Ativar Funcionário</a>
-      <button class="btn btn-info w-100" [routerLink]="['/']">Voltar</button>
+      <button class="btn btn-info w-100" [routerLink]="['/home']">Voltar</button>
     </div>
   </form>
 </div>
