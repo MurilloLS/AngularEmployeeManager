@@ -84,7 +84,7 @@ A Aplicação de Gestão de Funcionários foi criada para otimizar a administra�
     ng serve
     ```
 
-5. Acesse a documentação da API via Swagger em `https://localhost:<PORTA>/swagger`.
+5. Acesse a documentação da API via Swagger em `https://localhost:<PORTA>`.
 
 ## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou enviar um pull request.
